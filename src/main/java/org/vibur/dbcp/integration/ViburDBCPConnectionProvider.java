@@ -87,6 +87,9 @@ public class ViburDBCPConnectionProvider implements ConnectionProvider {
     private Properties transform(Properties props) {
         Properties result  = new Properties();
 
+        String driverClassName = props.getProperty(Environment.DRIVER);
+        if (driverClassName != null)
+            result.setProperty("driverClassName", driverClassName);
         String jdbcUrl = props.getProperty(Environment.URL);
         if (jdbcUrl != null)
             result.setProperty("jdbcUrl", jdbcUrl);
