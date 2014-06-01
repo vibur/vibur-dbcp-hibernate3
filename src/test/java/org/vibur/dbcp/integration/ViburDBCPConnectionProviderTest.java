@@ -50,7 +50,7 @@ import static org.mockito.Mockito.mock;
 import static org.vibur.dbcp.cache.ReturnVal.AVAILABLE;
 
 /**
- *  Hibernate unit/integration test.
+ * Hibernate unit/integration test.
  *
  * @author Simeon Malchev
  */
