@@ -9,6 +9,6 @@ The project maven coordinates are:
 <dependency>
   <groupId>org.vibur</groupId>
   <artifactId>vibur-dbcp-hibernate3</artifactId>
-  <version>7.0</version>
+  <version>8.0</version>
 </dependency>   
 ```
