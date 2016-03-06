@@ -55,26 +55,22 @@ public class ViburDBCPConnectionProvider implements ConnectionProvider {
 
     private ViburDBCPDataSource dataSource = null;
 
-    /** {@inheritDoc} */
     @Override
     public void configure(Properties props) throws HibernateException {
         dataSource = new ViburDBCPDataSource(transform(props));
         dataSource.start();
     }
 
-    /** {@inheritDoc} */
     @Override
     public Connection getConnection() throws SQLException {
         return dataSource.getConnection();
     }
 
-    /** {@inheritDoc} */
     @Override
     public void closeConnection(Connection conn) throws SQLException {
         conn.close();
     }
 
-    /** {@inheritDoc} */
     @Override
     public void close() throws HibernateException {
         if (dataSource != null) {
@@ -83,7 +79,6 @@ public class ViburDBCPConnectionProvider implements ConnectionProvider {
         }
     }
 
-    /** {@inheritDoc} */
     @Override
     public boolean supportsAggressiveRelease() {
         return false;
