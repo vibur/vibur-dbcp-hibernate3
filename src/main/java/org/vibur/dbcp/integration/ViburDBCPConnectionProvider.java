@@ -109,8 +109,8 @@ public class ViburDBCPConnectionProvider implements ConnectionProvider {
             result.setProperty("defaultAutoCommit", defaultAutoCommit);
 
         for (Map.Entry<Object, Object> entry : props.entrySet()) {
-            String key = (String) entry.getKey();
-            String value = (String) entry.getValue();
+            String key = entry.getKey().toString();
+            String value = entry.getValue().toString();
             if (key.startsWith(VIBUR_PREFIX)) {
                 key = key.substring(VIBUR_PREFIX.length());
                 result.setProperty(key, value);
